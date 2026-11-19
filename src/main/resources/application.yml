@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: redis-loader
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      client-type: jedis
+
+app:
+  redis:
+    put-with-ttl: 5m
+  scheduler:
+    interval: 30m
+    total-count: 1000
+    size: 1024
+    concurrency: 8
+    delay: 100ms
